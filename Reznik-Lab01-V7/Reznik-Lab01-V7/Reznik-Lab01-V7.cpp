@@ -1,6 +1,9 @@
 ﻿// Reznik-Lab01-V7.cpp : This file contains the 'main' function. Program execution begins and ends there.
 // author Reznik D.O. student of group 222z (online)
 
+//Відомо, що 1 дюйм дорівнює 2,54 см. Задане значення дюймів перевести в сантиметри та навпаки, для заданого значення сантиметрів визначити його
+//еквівалент у дюймах.
+
 #include <iostream> // Підключаємо бібліотеку для введення/виведення
 using namespace std; // Використовуємо простір імен std, щоб спростити звернення до об'єктів std
 
