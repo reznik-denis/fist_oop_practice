@@ -1,0 +1,4 @@
+﻿  Reznik-Lab01-V7.cpp
+D:\С\fist_oop_practice\Reznik-Lab01-V7\Reznik-Lab01-V7\Reznik-Lab01-V7.cpp(13,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\С\fist_oop_practice\Reznik-Lab01-V7\Reznik-Lab01-V7\Reznik-Lab01-V7.cpp(19,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Reznik-Lab01-V7.vcxproj -> D:\С\fist_oop_practice\Reznik-Lab01-V7\x64\Debug\Reznik-Lab01-V7.exe
