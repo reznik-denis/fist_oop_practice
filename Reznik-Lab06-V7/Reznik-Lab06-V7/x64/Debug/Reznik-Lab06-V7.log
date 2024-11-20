@@ -1,0 +1,3 @@
+﻿  Reznik-Lab06-V7.cpp
+D:\С\fist_oop_practice\Reznik-Lab06-V7\Reznik-Lab06-V7\Reznik-Lab06-V7.cpp(13,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Reznik-Lab06-V7.vcxproj -> D:\С\fist_oop_practice\Reznik-Lab06-V7\x64\Debug\Reznik-Lab06-V7.exe
