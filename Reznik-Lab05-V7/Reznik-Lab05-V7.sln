@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35507.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Reznik-Lab05-V7", "Reznik-Lab05-V7\Reznik-Lab05-V7.vcxproj", "{7B12400E-A8E8-4182-9D33-0346B15479F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B12400E-A8E8-4182-9D33-0346B15479F2}.Debug|x64.ActiveCfg = Debug|x64
+		{7B12400E-A8E8-4182-9D33-0346B15479F2}.Debug|x64.Build.0 = Debug|x64
+		{7B12400E-A8E8-4182-9D33-0346B15479F2}.Debug|x86.ActiveCfg = Debug|Win32
+		{7B12400E-A8E8-4182-9D33-0346B15479F2}.Debug|x86.Build.0 = Debug|Win32
+		{7B12400E-A8E8-4182-9D33-0346B15479F2}.Release|x64.ActiveCfg = Release|x64
+		{7B12400E-A8E8-4182-9D33-0346B15479F2}.Release|x64.Build.0 = Release|x64
+		{7B12400E-A8E8-4182-9D33-0346B15479F2}.Release|x86.ActiveCfg = Release|Win32
+		{7B12400E-A8E8-4182-9D33-0346B15479F2}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {605EC25A-1A92-4831-9487-D4B4242C70E3}
+	EndGlobalSection
+EndGlobal
