@@ -3,59 +3,68 @@
 
 //Дано двовимірний масив з N*М цілих чисел. Виконати дзеркальне відображення матриці по вертикалі (необов’язково квадратної матриці).
 
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
-using namespace std;
+#include <iostream>  // Підключаємо бібліотеку для роботи з введенням/виведенням.
+#include <cstdlib>   // Підключаємо бібліотеку для роботи з функціями генерації випадкових чисел (rand()).
+#include <ctime>     // Підключаємо бібліотеку для роботи з функцією time().
+using namespace std; // Використовуємо простір імен std для спрощення запису.
 
-int main()
+int main() // Початок головної функції програми.
 {
-    srand(time(0));
-    int row = 0;
-    int cols = 0;
-    cout << "Enter size of array N M " << endl;
-    cin >> row >> cols;
+    srand(time(0)); // Ініціалізуємо генератор випадкових чисел поточним часом.
 
-    int** mas = new int* [row];
+    int row = 0; // Змінна для кількості рядків матриці.
+    int cols = 0; // Змінна для кількості стовпців матриці.
+
+    cout << "Enter size of array N M " << endl; // Виводимо запрошення для введення розміру масиву.
+    cin >> row >> cols; // Зчитуємо кількість рядків (row) і стовпців (cols).
+
+    int** mas = new int* [row]; // Виділяємо пам'ять для рядків динамічного двовимірного масиву.
     for (int i = 0; i < row; i++) {
-        mas[i] = new int[cols];
+        mas[i] = new int[cols]; // Виділяємо пам'ять для стовпців кожного рядка.
     }
 
-    for (int i = 0; i < row; i++) {
-        for (int j = 0; j < cols; j++) {
-            mas[i][j] = rand() % 100;
-        }
-    }
-    cout << "You have an array size " << row << "*" << cols << endl;
-
-    for (int i = 0; i < row; i++) {
-        for (int j = 0; j < cols; j++) {
-            cout << mas[i][j] << "  ";
-        }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    for (int i = 0; i < row; i++) {
-        for (int j = 0; j < cols / 2; j++) {
-            int old = mas[i][j];
-            mas[i][j] = mas[i][cols - j - 1];
-            mas[i][cols - j - 1] = old;
+    for (int i = 0; i < row; i++) { // Ітерація по рядках.
+        for (int j = 0; j < cols; j++) { // Ітерація по стовпцях.
+            mas[i][j] = rand() % 100; // Заповнюємо масив випадковими числами від 0 до 99.
         }
     }
 
-    cout << "Your array after vertical mirror " << endl;
+    cout << "You have an array size " << row << "*" << cols << endl; // Повідомляємо розмір створеного масиву.
 
-    for (int i = 0; i < row; i++) {
-        for (int j = 0; j < cols; j++) {
-            cout << mas[i][j] << "  ";
+    for (int i = 0; i < row; i++) { // Ітерація по рядках для виводу початкового масиву.
+        for (int j = 0; j < cols; j++) { // Ітерація по стовпцях.
+            cout << mas[i][j] << "  "; // Виводимо елемент масиву.
         }
-        cout << endl;
+        cout << endl; // Перехід до нового рядка після виводу одного рядка масиву.
     }
 
-    return 0;
+    cout << endl; // Додаємо порожній рядок для зручності читання.
+
+    for (int i = 0; i < row; i++) { // Ітерація по рядках для виконання дзеркального відображення.
+        for (int j = 0; j < cols / 2; j++) { // Проходимо тільки половину стовпців (дзеркальна операція).
+            int old = mas[i][j]; // Зберігаємо значення поточного елемента.
+            mas[i][j] = mas[i][cols - j - 1]; // Присвоюємо значення елемента з протилежного краю.
+            mas[i][cols - j - 1] = old; // Присвоюємо збережене значення у протилежний елемент.
+        }
+    }
+
+    cout << "Your array after vertical mirror " << endl; // Повідомляємо про виконання дзеркального відображення.
+
+    for (int i = 0; i < row; i++) { // Ітерація по рядках для виводу оновленого масиву.
+        for (int j = 0; j < cols; j++) { // Ітерація по стовпцях.
+            cout << mas[i][j] << "  "; // Виводимо елемент масиву.
+        }
+        cout << endl; // Перехід до нового рядка після виводу одного рядка масиву.
+    }
+
+    for (int i = 0; i < row; ++i) {
+        delete[] mas[i]; // Звільнення пам'яті для кожного рядка матриці (масивів, що є елементами "верхнього" масиву)
+    }
+    delete[] mas; // Звільнення пам'яті для основного масиву вказівників (верхнього рівня матриці)
+
+    return 0; // Завершення програми з успішним статусом.
 }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
