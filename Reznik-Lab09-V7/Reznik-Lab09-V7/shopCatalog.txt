@@ -1,0 +1,5 @@
+4
+Book 1|Author 1|month1|1980|340
+Book 1|Author 2|month2|1980|500
+Book 3|Author 3|month3|1970|400
+Book 4|Author 4|month4|1980|700
